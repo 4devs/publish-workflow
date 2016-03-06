@@ -1,0 +1,30 @@
+{
+    "name": "fdevs/publish-workflow",
+    "license": "MIT",
+    "type": "library",
+    "description": "Publish workflow library",
+    "homepage": "https://github.com/4devs/publish-workflow",
+    "keywords": [
+        "publish workflow"
+    ],
+    "authors": [
+        {
+            "name": "Samusev Andrey",
+            "email": "andrey@4devs.pro",
+            "homepage": "http://andrey.4devs.io/"
+        },
+        {
+            "name": "4devs Community",
+            "homepage": "https://github.com/4devs/publish-workflow/contributors"
+        }
+    ],
+    "require-dev": {},
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "FDevs\\PublishWorkflow\\": ""
+        }
+    }
+}
