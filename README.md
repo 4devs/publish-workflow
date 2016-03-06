@@ -1,6 +1,8 @@
 Publish Workflow Library
 ========================
 
+[![Build Status](https://travis-ci.org/4devs/publish-workflow.svg?branch=master)](https://travis-ci.org/4devs/publish-workflow)
+
 Documentation
 -------------
 
