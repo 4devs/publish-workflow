@@ -44,7 +44,7 @@ class PublishWorkflow
         $startDate = $object->getPublishStartDate();
         $currentDate = $currentDate ?: new \DateTime();
 
-        return null !== $startDate && $currentDate < $startDate;
+        return null === $startDate || $currentDate > $startDate;
     }
 
     /**
@@ -58,6 +58,6 @@ class PublishWorkflow
         $endDate = $object->getPublishEndDate();
         $currentDate = $currentDate ?: new \DateTime();
 
-        return null !== $endDate && $currentDate > $endDate;
+        return null === $endDate || $currentDate < $endDate;
     }
 }
