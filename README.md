@@ -18,6 +18,56 @@ $ php composer.phar require fdevs/publish-workflow
 
 Composer will install the library to your project's `vendor/fdevs` directory.
 
+Usage
+-----
+
+1. Create model
+2. Use service
+
+### Create Model
+
+```php
+<?php
+
+namespace App\Model;
+
+use FDevs\PublishWorkflow\Model\PublishTrait;
+use FDevs\PublishWorkflow\PublishInterface;
+
+class SameDocument implements PublishInterface
+{
+    use PublishTrait;
+}
+
+```
+
+### Use Service
+
+```php
+$publishWorkflow = new FDevs\PublishWorkflow\PublishWorkflow();
+$model = new App\Model\SameDocument();
+$model->setPublishable(true);
+
+echo $publishWorkflow->isPublish($model); //true
+
+
+//start publishable tomorrow
+$model
+    ->setPublishable(true)
+    ->setPublishStartDate(new \DateTime('tomorrow'))
+;
+
+echo $publishWorkflow->isPublish($model); //false
+
+//end publishable tomorrow
+$model
+    ->setPublishable(true)
+    ->setPublishEndDate(new \DateTime('tomorrow'))
+;
+
+echo $publishWorkflow->isPublish($model); //true
+```
+
 License
 -------
 
