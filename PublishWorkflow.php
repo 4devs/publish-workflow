@@ -17,7 +17,7 @@ class PublishWorkflow
             $publish = $this->isPublishStart($object, $currentDate);
         }
         if ($publish && $object instanceof PublishEndReadInterface) {
-            $publish = $this->isPublishEnd($object, $currentDate);
+            $publish = $this->isPublishNotEnd($object, $currentDate);
         }
 
         return $publish;
@@ -53,7 +53,7 @@ class PublishWorkflow
      *
      * @return bool
      */
-    public function isPublishEnd(PublishEndReadInterface $object, \DateTimeInterface $currentDate = null)
+    public function isPublishNotEnd(PublishEndReadInterface $object, \DateTimeInterface $currentDate = null)
     {
         $endDate = $object->getPublishEndDate();
         $currentDate = $currentDate ?: new \DateTime();
