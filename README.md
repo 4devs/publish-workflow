@@ -18,6 +18,13 @@ $ php composer.phar require fdevs/publish-workflow
 
 Composer will install the library to your project's `vendor/fdevs` directory.
 
+
+Diagram
+-------
+The default publish workflow corresponds to the following diagram:
+
+![following diagram](following-diagram.png)
+
 Usage
 -----
 
