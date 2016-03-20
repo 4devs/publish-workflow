@@ -22,6 +22,9 @@
     "require": {
         "php": ">=5.4"
     },
+    "suggest": {
+        "fdevs/publish-workflow-bridge": "For the use with symfony voter or doctrine mongodb filters"
+    },
     "autoload": {
         "psr-4": {
             "FDevs\\PublishWorkflow\\": ""

@@ -6,6 +6,7 @@ Publish Workflow Library
 Documentation
 -------------
 
+For the use with [symfony voter](http://symfony.com/doc/current/cookbook/security/voters.html) or [doctrine mongodb filters](http://doctrine-mongodb-odm.readthedocs.org/en/latest/reference/filters.html) use [publish-workflow-bridge](https://github.com/4devs/publish-workflow-bridge)
 
 Installation
 ------------
