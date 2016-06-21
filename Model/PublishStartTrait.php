@@ -20,7 +20,7 @@ trait PublishStartTrait
      *
      * @return $this
      */
-    public function setPublishStartDate(\DateTimeInterface $publishStartDate)
+    public function setPublishStartDate(\DateTimeInterface $publishStartDate = null)
     {
         $this->publishStartDate = $publishStartDate;
 
